@@ -50,9 +50,11 @@ function TodoListFeature(props) {
     }
 
     function handleFilterClick(status) {
+
         setFilteredStatus(status);
-        const renderedTodoList = todos.filter(todo => filteredStatus === 'all' || filteredStatus === todo.status);
-        console.log(renderedTodoList);
+        console.log(filteredStatus);
+        //const renderedTodoList = todos.filter(todo => filteredStatus === 'all' || filteredStatus === todo.status);
+        //console.log(renderedTodoList);
         //setTodos(renderedTodoList);
     }
 
