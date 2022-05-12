@@ -14,7 +14,8 @@ function TodoListFeature(props) {
         { id: 3, title: 'Điện Quang là bóng đèn', status: 'new' },
     ]);
 
-    const [filteredStatus, setFilteredStatus] = useState('all');
+    //const [filterValue, setFilterValue] = useState('all');
+
 
     function handleDeleteOnClick(todo) {
         const index = todos.findIndex(x => x.id === todo.id);
@@ -49,20 +50,20 @@ function TodoListFeature(props) {
         console.log(newTodo);
     }
 
-    function handleFilterClick(status) {
-        setFilteredStatus(status);
-        console.log(filteredStatus);
-        //const renderedTodoList = todos.filter(todo => filteredStatus === 'all' || filteredStatus === todo.status);
-        //console.log(renderedTodoList);
-        //setTodos(renderedTodoList);
-    }
+    // function handleFilterClick(status) {
+    //     const newTodos = [...todos];
+    //     const renderedTodoList = newTodos.filter(todo => status === 'all' || status === todo.status);
+    //     //console.log(renderedTodoList);
+    //     setTodos(renderedTodoList);
+    //     setFilterValue(status);
+    // }
 
 
     return (
         <div>
             {/* <TodoList todos={todos} onTodoClick={handleDeleteOnClick} /> */}
             <TodoList todos={todos} onTodoClick={handleChangeStatusOnClick} />
-            <TodoFilter onFilterClick={handleFilterClick} />
+            {/* <TodoFilter onFilterClick={handleFilterClick} /> */}
             <TodoForm onSubmit={handleTodoFormSubmit} />
         </div>
     );

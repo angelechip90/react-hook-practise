@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 
 TodoFilter.propTypes = {
     onFilterClick: PropTypes.func,
@@ -14,8 +14,9 @@ function TodoFilter(props) {
     const { onFilterClick } = props;
 
     function handleFilterClick(status) {
-        if (onFilterClick)
+        if (onFilterClick) {
             onFilterClick(status);
+        }
     }
 
     return (
