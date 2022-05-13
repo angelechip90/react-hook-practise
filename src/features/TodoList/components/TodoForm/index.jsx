@@ -35,7 +35,7 @@ function TodoForm(props) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" value={value} onChange={handleValueChange}></input>
+            <label style={{ marginRight: '10px' }}>Input new task:</label> <input type="text" value={value} onChange={handleValueChange} placeholder='Input new task and enter'></input>
         </form>
 
     );

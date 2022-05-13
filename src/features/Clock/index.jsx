@@ -9,13 +9,21 @@ ClockFeature.propTypes = {
 
 function ClockFeature(props) {
     const [showClock, setShowClock] = useState(true);
-
+    function changeShowlock() {
+        if (showClock === true)
+            setShowClock(false);
+        else
+            setShowClock(true);
+    }
     return (
         <div>
-            {showClock && <Clock />}
-            <CustomHookClock />
-            <button onClick={() => setShowClock(false)}>Hide clock</button>
-        </div>
+            {/* {showClock && <Clock />} */}
+
+            {showClock && <CustomHookClock />}
+            {/* <button disabled={showClock === false} onClick={() => setShowClock(false)}>Hide Clock</button>
+            <button disabled={showClock === true} onClick={() => setShowClock(true)}>Show Clock</button> */}
+            <button onClick={changeShowlock}>{showClock === true ? "Hide Clock" : "Show Clock"}</button>
+        </div >
     );
 }
 

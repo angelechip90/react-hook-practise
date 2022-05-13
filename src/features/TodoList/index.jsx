@@ -9,9 +9,9 @@ TodoListFeature.propTypes = {
 
 function TodoListFeature(props) {
     const [todos, setTodos] = useState([
-        { id: 1, title: 'Chúng tôi là Siêu Nhân', status: 'new' },
-        { id: 2, title: 'Siêu Nhân Điện Quang', status: 'completed' },
-        { id: 3, title: 'Điện Quang là bóng đèn', status: 'new' },
+        { id: 1, title: 'Accepting The Tasks', status: 'new' },
+        { id: 2, title: 'Analysing The Tasks', status: 'completed' },
+        { id: 3, title: 'Coding and Finishing The Task', status: 'new' },
     ]);
 
     //const [filterValue, setFilterValue] = useState('all');
@@ -61,10 +61,11 @@ function TodoListFeature(props) {
 
     return (
         <div>
+            <TodoForm onSubmit={handleTodoFormSubmit} />
             {/* <TodoList todos={todos} onTodoClick={handleDeleteOnClick} /> */}
             <TodoList todos={todos} onTodoClick={handleChangeStatusOnClick} />
             {/* <TodoFilter onFilterClick={handleFilterClick} /> */}
-            <TodoForm onSubmit={handleTodoFormSubmit} />
+
         </div>
     );
 }
