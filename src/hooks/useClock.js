@@ -33,6 +33,8 @@ function useClock() {
         };
     }, []);
 
+    //Trả về object để sau này có thể trả về thêm nhiều thứ nữa
+    //Hoặc có thể chỉ cần trả về kiểu string thì không cần ngoặc nhọn
     return { timeString };
 }
 

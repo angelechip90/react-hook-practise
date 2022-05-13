@@ -12,8 +12,8 @@ function ClockFeature(props) {
 
     return (
         <div>
-            {/* {showClock && <Clock />} */}
-            {showClock && <CustomHookClock />}
+            {showClock && <Clock />}
+            <CustomHookClock />
             <button onClick={() => setShowClock(false)}>Hide clock</button>
         </div>
     );
