@@ -17,7 +17,6 @@ function HeroFeature(props) {
 
     //useRef: cách giữ giá trị trước đó của 1 state
     //áp dụng: ví dụ cái vị trí bản đồ, search vị trí 1 xong search vị trí 2
-
     const [countnum, setCountnum] = useState(0);
     const prevCount = useRef(countnum);
 
@@ -33,6 +32,7 @@ function HeroFeature(props) {
 
     return (
         <div>
+            <h2>Hero test useMomo và useCallback</h2>
             <p>{count}</p>
             <button onClick={() => setCount(count + 1)}>Increase</button>
 

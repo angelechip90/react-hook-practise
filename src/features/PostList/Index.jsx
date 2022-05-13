@@ -68,6 +68,7 @@ function PostFeatures(props) {
 
     return (
         <div>
+            <h2>Post List</h2>
             <PostFilterForm onSubmit={handleFilterChange} />
             <PostList posts={postList} />
             <Pagination pagination={pagination} onPageChange={handlePageChange} />

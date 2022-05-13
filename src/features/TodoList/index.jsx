@@ -61,6 +61,7 @@ function TodoListFeature(props) {
 
     return (
         <div>
+            <h2>Todo List</h2>
             <TodoForm onSubmit={handleTodoFormSubmit} />
             {/* <TodoList todos={todos} onTodoClick={handleDeleteOnClick} /> */}
             <TodoList todos={todos} onTodoClick={handleChangeStatusOnClick} />

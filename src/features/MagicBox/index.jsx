@@ -9,6 +9,7 @@ MagicBoxFeature.propTypes = {
 function MagicBoxFeature(props) {
     return (
         <div>
+            <h2>Magic Box</h2>
             <MagicBox />
         </div>
     );
